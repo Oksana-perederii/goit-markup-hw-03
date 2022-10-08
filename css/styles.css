@@ -12,6 +12,8 @@
   --button-primary-color: #f5f4fa;
   --button-text-color: #ffffff;
   --button-filter-color: #212121;
+  --border: #000;
+  --shadow: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -34,14 +36,22 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-/* header */
-
 .container {
   width: 100%;
   max-width: 1230px;
   margin: auto;
   padding: 0 15px;
+}
+
+/* header */
+.header {
+  background-color: var(--basic-bcg-color);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+}
+.navigation {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -50,23 +60,31 @@ ul {
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
+
+  display: block;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo-dark {
   color: var(--text-color);
   font-family: Raleway, sans-serif;
 }
+.nav-list {
+  display: flex;
+  gap: 50px;
+}
 
-.list .link {
+.link {
   text-decoration: none;
   color: var(--basic-text-color);
+  padding: 32px 0;
 }
 
-.list {
-  list-style: none;
-}
-
-.list .link.current {
+.link-current {
   color: var(--accent-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .link:hover,
@@ -75,21 +93,13 @@ ul {
   color: var(--accent-text-color);
 }
 
-.mail {
-  color: var(--secondary-text-color);
-  list-style: none;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-.mail:hover,
-.mail:focus {
-  color: var(--accent-text-color);
+.contacts-list {
+  display: flex;
+  gap: 50px;
+  margin-left: 344px;
 }
 
-.tel {
+.contact {
   color: var(--secondary-text-color);
   list-style: none;
   text-decoration: none;
@@ -97,21 +107,21 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding: 32px 0;
 }
-.tel:hover,
-.tel:focus {
+.contact:hover,
+.contact:focus {
   color: var(--accent-text-color);
 }
 
 /* main */
-.header {
+.hero {
   background-color: var(--bcg-color);
-  padding: 0 44px;
-  text-align: center;
-  border-bottom: 1px #000000;
+  margin-top: 106px;
+  padding: 200px 0;
 }
 
-.header.title {
+.hero.title {
   color: var(--primary-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -119,33 +129,43 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  width: 696px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header.button {
-  display: inline-block;
+.hero.button {
   background-color: var(--button-accent-color);
   color: var(--button-text-color);
   font-family: inherit;
   cursor: pointer;
   font-size: 16px;
   line-height: 1.8;
+  box-shadow: 0, 4px, 4px rgb(0, 0, 0 / 15%);
+
+  display: block;
   padding: 10px 32px;
   border-radius: 4px;
   min-width: 152px;
   border: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header.button:active {
+.hero.button:active {
   background-color: #188ce8;
 }
 
 .feature {
   background-color: var(--bcg-color-light);
   list-style: none;
-  margin-top: 0;
+  padding-top: 44px;
   margin-bottom: 44px;
+  display: flex;
+  gap: 30px;
 }
 
 .visually-hidden {
@@ -162,6 +182,7 @@ ul {
 }
 
 .title {
+  display: flex;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -170,6 +191,7 @@ ul {
   padding-bottom: 10px;
 }
 .feature.text {
+  display: flex;
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 2;
@@ -243,6 +265,14 @@ ul {
 
 .footer {
   background: #2f303a;
+}
+
+.logo.footer {
+  color: var(--accent-text-color);
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
 }
 
 .logo-light {
