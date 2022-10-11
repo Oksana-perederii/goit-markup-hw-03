@@ -155,7 +155,6 @@ img {
   cursor: pointer;
   font-size: 16px;
   line-height: 1.8;
-  box-shadow: 0, 4px, 4px rgb(0, 0, 0 / 15%);
 
   display: block;
   padding: 10px 32px;
@@ -314,13 +313,20 @@ img {
 .footer {
   background: #2f303a;
 }
+.footer-container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 60px 15px;
+}
 
-.logo {
+.footer-logo {
   color: var(--accent-text-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
+  margin-top: 60px;
 }
 
 .logo-light {
@@ -329,11 +335,10 @@ img {
 }
 
 .footer address {
-  padding-bottom: 60px;
+  margin-top: 20px;
 }
 .footer.list {
   list-style: none;
-  padding-top: 10px;
 }
 
 .footer.map {
@@ -342,7 +347,7 @@ img {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.7;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer.mail {
@@ -350,7 +355,7 @@ img {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer.mail:hover,
@@ -374,11 +379,15 @@ img {
 /* portfolio */
 
 .main.page {
-  margin-top: 94px;
+  display: block;
+  margin: 94px 0;
 }
 
 .button.list {
-  text-align: center;
+  margin-bottom: 34px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 .filter.button {
@@ -392,8 +401,8 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
 }
 
 .filter.button:hover,
@@ -401,30 +410,30 @@ img {
 .filter.button:active {
   background-color: var(--button-accent-color);
   color: var(--button-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio.list {
-   background-color: var(--basic-bcg-color);
-  list-style: none;
-  padding-top: 34px;
-  margin-bottom: 94px;
-  margin-top: 50px;
+  background-color: var(--basic-bcg-color);
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc((100% - 60px) / 3);
+  gap: 30px;
 }
 
 .list.link {
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
-/* 
-.portfolio.blok {
-  background-color: var(--basic-bcg-color);
-  margin-top: 50px; */
-}
+
 .portfolio.foto {
 }
 
 .portfolio.container {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
 
 .portfolio.title {
@@ -434,7 +443,7 @@ img {
   letter-spacing: 0.06em;
   text-transform: none;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -443,8 +452,6 @@ img {
   font-size: 16px;
   line-height: 2;
   text-transform: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-top: 4px;
+  margin: 0;
+  padding: 0;
 }
