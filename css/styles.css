@@ -127,8 +127,9 @@ img {
 /* main */
 .hero {
   background-color: var(--bcg-color);
-  margin-top: 106px;
-  padding: 0;
+  margin: 106px auto 0;
+  width: 1600px;
+  padding: 200px 0;
 }
 
 .hero.title {
@@ -141,14 +142,11 @@ img {
   text-transform: uppercase;
 
   width: 696px;
-  padding-top: 200px;
-  margin-bottom: 30px;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding: 0;
 }
 
-.hero.button {
+.hero-button {
   background-color: var(--button-accent-color);
   color: var(--button-text-color);
   font-family: inherit;
@@ -159,13 +157,12 @@ img {
   display: block;
   padding: 10px 32px;
   border-radius: 4px;
-  min-width: 152px;
+  min-width: 216px;
   border: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 0;
 }
 
-.hero.button:active {
+.hero-button:active {
   background-color: #188ce8;
 }
 
@@ -220,11 +217,12 @@ img {
 .gallery {
   background-color: var(--bcg-color-light);
   list-style: none;
-  margin-bottom: 44px;
-  margin-top: 0;
+  padding-bottom: 44px;
+  margin: 0;
+}
+.gallery.list {
   display: flex;
   gap: 30px;
-  padding-bottom: 2px;
 }
 .gallery.title {
   color: var(--basic-text-color);
@@ -234,18 +232,17 @@ img {
   text-align: center;
   text-transform: none;
   padding-bottom: 50px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .gallery.foto {
   padding: 0;
   margin: 0;
-  display: block;
+  display: flex;
 }
 
 .team {
   background-color: var(--secondary-bcg-color);
-  margin-bottom: 44px;
 }
 
 .team.title {
