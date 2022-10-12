@@ -53,8 +53,11 @@ img {
 .header {
   background-color: var(--basic-bcg-color);
   border: 1px solid #ececec;
+}
+.header-box {
   display: flex;
 }
+
 .navigation {
   display: flex;
   align-items: center;
